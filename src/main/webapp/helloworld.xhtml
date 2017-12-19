@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>PrimeFaces Hello World Example</title>
+</h:head>
+
+<h:body>
+    <h:form>
+
+        <p:panel header="PrimeFaces Hello World Example">
+            <h:panelGrid columns="1" cellpadding="4">
+            <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                <h:outputText value="First Name: " />
+                <p:inputText value="#{helloWorld.firstName}" />
+
+                <h:outputText value="Last Name: " />
+                <p:inputText value="#{helloWorld.lastName}" />
+            </h:panelGrid>
+
+
+                <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                    <h:outputText value="Vehicle: " />
+                    <p:selectBooleanCheckbox value="#{HelloWorld.value1}" id = "vehicle" />
+                </h:panelGrid>
+
+                <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+                    <p:outputLabel for="gender" value="Gender:" />
+                    <p:selectOneRadio id="gender" value="#{HelloWorld.gender}">
+                        <f:selectItem itemLabel="Male" itemValue="Male" />
+                        <f:selectItem itemLabel="Female" itemValue="Female" id="femaleGender" />
+                        <f:selectItem itemLabel="Other" itemValue="Other" />
+                    </p:selectOneRadio>
+                </h:panelGrid>
+
+            <h:panelGrid columns="2" cellpadding="20" styleClass="ui-grid">
+                <h:outputLabel for="basic" value="Spinner: " />
+                <p:spinner id="basic" value="#{HelloWorld.number}" />
+            </h:panelGrid>
+
+
+            <h:panelGrid columns="3" cellpadding="20" styleClass="ui-grid">
+                <p:selectOneMenu id="console" value="#{HelloWorld.year}" style="width:125px">
+                    <f:selectItem itemLabel="Year" itemValue="" />
+                    <f:selectItem itemLabel="2000" itemValue="2000" />
+                    <f:selectItem itemLabel="2001" itemValue="2001" />
+                    <f:selectItem itemLabel="2002" itemValue="2002" />
+                    <f:selectItem itemLabel="2003" itemValue="2003" />
+                    <f:selectItem itemLabel="2004" itemValue="2004" />
+                    <f:selectItem itemLabel="2005" itemValue="2005" />
+                    <f:selectItem itemLabel="2006" itemValue="2006" />
+                    <f:selectItem itemLabel="2007" itemValue="2007" />
+                    <f:selectItem itemLabel="2008" itemValue="2008" />
+                    <f:selectItem itemLabel="2009" itemValue="2009" />
+                    <f:selectItem itemLabel="2010" itemValue="2010" />
+                    <f:selectItem itemLabel="2011" itemValue="2011" />
+                    <f:selectItem itemLabel="2012" itemValue="2012" />
+                </p:selectOneMenu>
+                <p:selectOneMenu id="console2" value="#{HelloWorld.month}" style="width:125px">
+                    <f:selectItem itemLabel="Month" itemValue="" />
+                    <f:selectItem itemLabel="January" itemValue="January" />
+                    <f:selectItem itemLabel="February" itemValue="February" />
+                    <f:selectItem itemLabel="March" itemValue="March" />
+                    <f:selectItem itemLabel="April" itemValue="April" />
+                    <f:selectItem itemLabel="May" itemValue="May" />
+                    <f:selectItem itemLabel="June" itemValue="June" />
+                    <f:selectItem itemLabel="July" itemValue="July" />
+                    <f:selectItem itemLabel="August" itemValue="August" />
+                    <f:selectItem itemLabel="September" itemValue="September" />
+                    <f:selectItem itemLabel="October" itemValue="October" />
+                    <f:selectItem itemLabel="November" itemValue="November" />
+                    <f:selectItem itemLabel="December" itemValue="December" />
+                </p:selectOneMenu>
+                <p:selectOneMenu id="console3" value="#{HelloWorld.day}" style="width:125px">
+                    <f:selectItem itemLabel="Day" itemValue="" />
+                    <f:selectItem itemLabel="1" itemValue="1" />
+                    <f:selectItem itemLabel="2" itemValue="2" />
+                    <f:selectItem itemLabel="3" itemValue="3" />
+                    <f:selectItem itemLabel="4" itemValue="4" />
+                    <f:selectItem itemLabel="5" itemValue="5" />
+                    <f:selectItem itemLabel="6" itemValue="6" />
+                    <f:selectItem itemLabel="7" itemValue="7" />
+                    <f:selectItem itemLabel="8" itemValue="8" />
+                    <f:selectItem itemLabel="9" itemValue="9" />
+                    <f:selectItem itemLabel="10" itemValue="10" />
+                    <f:selectItem itemLabel="11" itemValue="11" />
+                    <f:selectItem itemLabel="12" itemValue="12" />
+                    <f:selectItem itemLabel="13" itemValue="13" />
+                    <f:selectItem itemLabel="14" itemValue="14" />
+                    <f:selectItem itemLabel="15" itemValue="15" />
+                    <f:selectItem itemLabel="16" itemValue="16" />
+                    <f:selectItem itemLabel="17" itemValue="17" />
+                    <f:selectItem itemLabel="18" itemValue="18" />
+                    <f:selectItem itemLabel="19" itemValue="19" />
+                    <f:selectItem itemLabel="20" itemValue="20" />
+                    <f:selectItem itemLabel="21" itemValue="21" />
+                    <f:selectItem itemLabel="22" itemValue="22" />
+                    <f:selectItem itemLabel="23" itemValue="23" />
+                    <f:selectItem itemLabel="24" itemValue="24" />
+                    <f:selectItem itemLabel="25" itemValue="25" />
+                    <f:selectItem itemLabel="26" itemValue="26" />
+                    <f:selectItem itemLabel="27" itemValue="27" />
+                    <f:selectItem itemLabel="28" itemValue="28" />
+                    <f:selectItem itemLabel="29" itemValue="29" />
+                    <f:selectItem itemLabel="30" itemValue="30" />
+                </p:selectOneMenu>
+            </h:panelGrid>
+
+
+                <p:dataTable var="tvStation" value="#{helloWorld.stations}">
+                    <p:column headerText="Station">
+                        <h:outputText value="#{tvStation.station}" />
+                    </p:column>
+
+                    <p:column headerText="Web">
+                        <h:outputText value="#{tvStation.web}" />
+                    </p:column>
+                    <p:column headerText="Private">
+                        <h:outputText value="#{tvStation.isPrivate}" />
+                    </p:column>
+                </p:dataTable>
+
+
+                <p:commandButton value="Submit" update="greeting"
+                    oncomplete="PF('greetingDialog').show()" />
+            </h:panelGrid>
+        </p:panel>
+
+        <p:dialog header="Greeting" widgetVar="greetingDialog"
+            modal="true" resizable="false">
+            <h:panelGrid id="greeting" columns="1" cellpadding="4">
+                <h:outputText value="#{helloWorld.showGreeting()}" />
+            </h:panelGrid>
+        </p:dialog>
+
+    </h:form>
+</h:body>
+</html>
