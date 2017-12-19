@@ -14,8 +14,8 @@ import java.util.Map;
 @ViewScoped
 public class HelloWorld implements Serializable {
 
-    private String firstName = "John";
-    private String lastName = "Doe";
+    private String firstName = "Jonas";
+    private String lastName = "Hansen";
     private String gender;
     private int number;
 
@@ -28,18 +28,6 @@ public class HelloWorld implements Serializable {
 
     public void setYear(String year) {
         this.year = year;
-    }
-
-
-
-    @PostConstruct
-    public void init2() {
-
-/*
-        years  = new ArrayList<>();
-        years.add("USA");
-        years.add("Germany");
-        years.add("Brazil"); */
     }
 
 
